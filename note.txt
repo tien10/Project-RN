@@ -1,1 +1,6 @@
 1/ notification-rn
+2/ thu vien:
+expo install expo-notifications
+expo install expo-permissions (only ios)
+3/ android phai sua file app.json
+them "useNextNotificationsApi": true
