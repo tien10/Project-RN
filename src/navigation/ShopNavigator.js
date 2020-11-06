@@ -1,5 +1,6 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
+import { Platform } from "react-native";
 
 import ProductsOverviewScreen from "../screens/shop/ProductsOverviewScreen";
 import Colors from "../constants/Colors";
@@ -11,10 +12,9 @@ const ProductsNavigator = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: Colors.primary,
+        backgroundColor: Platform.OS === "android" ? Colors.primary : "",
       },
-
-      headerTintColor: Colors.primary,
+      headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
     },
   }
 );
